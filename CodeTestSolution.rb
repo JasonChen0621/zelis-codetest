@@ -50,9 +50,10 @@ class Problem2 < CodeTestSolution
     res = visit('/urls', cookie_string, false)
 	download_list = res.body.scan(/\/file\/\w+.json/)
 	download_list.each { | filepath |
-	  # filename = filepath.match('\w+.json').to_s
 	  contents = visit(filepath, cookie_string, true)
 	  print(contents)
+	  # Code for actually saving the files out - need elevated permissions to run
+	  # filename = filepath.match('\w+.json').to_s
 	  # f = File.open(filename, "w")
 	  # f.write(contents.body)
 	  # f.close
