@@ -1,6 +1,4 @@
 require 'httparty'
-url = 'https://codetest.services.mdxdata.com'
-url2 = 'https://codetest2.services.mdxdata.com'
 
 class CodeTestSolution
 
